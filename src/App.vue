@@ -4,6 +4,7 @@ import TenderAbout from "@/views/TenderAbout.vue";
 import LocalPartners from "@/views/LocalPartners.vue";
 import TenderContact from "@/views/TenderContact.vue";
 import TenderEvents from "@/views/TenderEvents.vue";
+import MediaKit from "@/views/MediaKit.vue";
 </script>
 
 <template>
@@ -63,7 +64,7 @@ import TenderEvents from "@/views/TenderEvents.vue";
         <TenderContact />
       </div>
       <div class="section">
-        <h3>media kit</h3>
+        <MediaKit />
       </div>
     </full-page>
   </div>

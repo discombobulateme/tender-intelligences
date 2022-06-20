@@ -30,7 +30,7 @@
 body {
   color: var(--color-text);
   transition: color 0.5s, background-color 0.5s;
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-size: 18px;
   line-height: 26.66px;
   text-rendering: optimizeLegibility;
@@ -39,33 +39,32 @@ body {
 }
 
 h1 {
-  font-family: 'Cormorant', serif;
+  font-family: "Cormorant", serif;
   font-size: 105px;
   font-weight: 700;
+  margin-bottom: 2rem;
 }
 
 h2 {
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-size: 28px;
   font-weight: 400;
 }
 
 h3 {
-  font-family: 'Cormorant', serif;
+  font-family: "Cormorant", serif;
   font-size: 35px;
   font-weight: 700;
 }
 
 h4 {
-  font-family: 'Cormorant', serif;
+  font-family: "Cormorant", serif;
   font-size: 35px;
   font-weight: 700;
 }
 
 h5 {
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-size: 18px;
   font-weight: 400;
 }
-
-

@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h3>about</h3>
     <p>
       “tender intelligences” is an exhibition on the use, design and care of
       community-driven AI. The intention of the curatorial approach hopes to
