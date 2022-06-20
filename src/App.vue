@@ -1,11 +1,23 @@
+<script setup>
+import TenderHome from "@/views/TenderHome.vue";
+import TenderAbout from "@/views/TenderAbout.vue";
+import LocalPartners from "@/views/LocalPartners.vue";
+import TenderContact from "@/views/TenderContact.vue";
+import TenderEvents from "@/views/TenderEvents.vue";
+</script>
+
 <template>
   <div id="app">
     <ul id="menu">
       <li data-menuanchor="page1" class="active">
-        <a href="#page1">Section 1</a>
+        <a href="#page1">tender intelligences</a>
       </li>
-      <li data-menuanchor="page2"><a href="#page2">Section 2</a></li>
-      <li data-menuanchor="page3"><a href="#page3">Section 3</a></li>
+      <li data-menuanchor="page2"><a href="#page2">about</a></li>
+      <li data-menuanchor="page3"><a href="#page3">local partners</a></li>
+      <li data-menuanchor="page4"><a href="#page3">selected works</a></li>
+      <li data-menuanchor="page5"><a href="#page3">events</a></li>
+      <li data-menuanchor="page6"><a href="#page3">contact</a></li>
+      <li data-menuanchor="page7"><a href="#page3">media kit</a></li>
       <li>
         <a
           href="https://twitter.com/imac2"
@@ -23,54 +35,35 @@
         </a>
       </li>
     </ul>
-    <ul class="actions">
-      <li>
-        <a class="actions-button" href="#" rel="noopener" @click="addSection"
-          >Add section</a
-        >
-      </li>
-      <li>
-        <a class="actions-button" href="#" rel="noopener" @click="removeSection"
-          >Remove section</a
-        >
-      </li>
-      <li>
-        <a
-          class="actions-button"
-          href="#"
-          rel="noopener"
-          @click="toggleNavigation"
-          >Toggle nav</a
-        >
-      </li>
-      <li>
-        <a
-          class="actions-button"
-          href="#"
-          rel="noopener"
-          @click="toggleScrollbar"
-          >Toggle scrollBar</a
-        >
-      </li>
-    </ul>
-
     <full-page :options="options" id="fullpage" ref="fullpage">
       <div class="section">
-        <h3>Section 1</h3>
+        <TenderHome />
+      </div>
+      <div class="section">
+        <TenderAbout />
+      </div>
+      <div class="section">
+        <LocalPartners />
       </div>
       <div class="section">
         <div class="slide">
-          <h3>Slide 2.1</h3>
+          <h3>selected works</h3>
         </div>
         <div class="slide">
-          <h3>Slide 2.2</h3>
+          <h3>selected works 2</h3>
         </div>
         <div class="slide">
-          <h3>Slide 2.3</h3>
+          <h3>selected works 2</h3>
         </div>
       </div>
       <div class="section">
-        <h3>Section 3</h3>
+        <TenderEvents />
+      </div>
+      <div class="section">
+        <TenderContact />
+      </div>
+      <div class="section">
+        <h3>media kit</h3>
       </div>
     </full-page>
   </div>
@@ -91,18 +84,16 @@ export default {
         scrollBar: false,
         menu: "#menu",
         navigation: true,
-        anchors: ["page1", "page2", "page3"],
-        sectionsColor: [
-          "#41b883",
-          "#ff5f45",
-          "#0798ec",
-          "#fec401",
-          "#1bcee6",
-          "#ee1a59",
-          "#2c3e4f",
-          "#ba5be9",
-          "#b4b8ab",
+        anchors: [
+          "page1",
+          "page2",
+          "page3",
+          "page4",
+          "page5",
+          "page6",
+          "page7",
         ],
+        sectionsColor: ["#E37B50", "#6D9DDF", "#E7D661", "#55BA63", "#A3A391"],
       },
     };
   },
@@ -177,6 +168,8 @@ export default {
 </script>
 
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,700;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap");
+
 ul {
   list-style-type: none;
   padding: 0;
