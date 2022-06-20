@@ -3,7 +3,9 @@
 A curatorship from Paloma Oliveira &amp; Renata Gaui for B-LA project 2022
 
 ## Development
+
 This template should help get you started developing with Vue 3 in Vite.
+It uses [vue-fullpage main wrapper](https://github.com/alvarotrigo/vue-fullpage.js)
 
 ### Recommended IDE Setup
 
