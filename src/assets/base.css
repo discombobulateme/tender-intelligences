@@ -2,6 +2,11 @@
 :root {
   --color-text: #000000;
   --section-gap: 160px;
+  --color-sidebar: #a3a38f;
+  --color-orange: #f37344;
+  --color-blue: #5e9ee4;
+  --color-green: #00bd58;
+  --color-yellow: #ebd547;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -79,4 +84,42 @@ a {
   text-decoration: underline;
   font-weight: 700;
   cursor: pointer;
+}
+
+#menu-line {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 159px;
+  height: 2px;
+  background: #fff;
+}
+#menu {
+  position: fixed;
+  z-index: 70;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  background-color: var(--color-sidebar);
+}
+#menu li {
+  display: inline-block;
+  margin: 10px 0;
+  position: relative;
+}
+#menu a {
+  color: var(--color-text);
+  padding: 0 1.1em 1.1em 1.1em;
+  text-decoration: none;
+  font-family: "Space Mono", monospace;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+#menu a:hover {
+  font-weight: 700;
+}
+
+#menu a:focus {
+  text-decoration: underline;
+  font-weight: 700;
 }
