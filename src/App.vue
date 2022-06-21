@@ -2,6 +2,7 @@
 import TenderHome from "@/views/TenderHome.vue";
 import TenderAbout from "@/views/TenderAbout.vue";
 import LocalPartners from "@/views/LocalPartners.vue";
+import SelectedWorks from "@/views/SelectedWorks.vue";
 import TenderContact from "@/views/TenderContact.vue";
 import TenderEvents from "@/views/TenderEvents.vue";
 import MediaKit from "@/views/MediaKit.vue";
@@ -15,10 +16,10 @@ import MediaKit from "@/views/MediaKit.vue";
       </li>
       <li data-menuanchor="page2"><a href="#page2">about</a></li>
       <li data-menuanchor="page3"><a href="#page3">local partners</a></li>
-      <li data-menuanchor="page4"><a href="#page3">selected works</a></li>
-      <li data-menuanchor="page5"><a href="#page3">events</a></li>
-      <li data-menuanchor="page6"><a href="#page3">contact</a></li>
-      <li data-menuanchor="page7"><a href="#page3">media kit</a></li>
+      <li data-menuanchor="page4"><a href="#page4">selected works</a></li>
+      <li data-menuanchor="page5"><a href="#page5">events</a></li>
+      <li data-menuanchor="page6"><a href="#page6">contact</a></li>
+      <li data-menuanchor="page7"><a href="#page7">media kit</a></li>
       <li>
         <a
           href="https://twitter.com/imac2"
@@ -47,16 +48,19 @@ import MediaKit from "@/views/MediaKit.vue";
         <LocalPartners />
       </div>
       <div class="section">
-        <div class="slide">
-          <h3>selected works</h3>
-        </div>
-        <div class="slide">
-          <h3>selected works 2</h3>
-        </div>
-        <div class="slide">
-          <h3>selected works 2</h3>
-        </div>
+        <SelectedWorks />
       </div>
+      <!-- <div class="section">
+        <div class="slide">
+          <h3>SLIDESSSS</h3>
+        </div>
+        <div class="slide">
+          <h3>selected works 2</h3>
+        </div>
+        <div class="slide">
+          <h3>selected works 2</h3>
+        </div>
+      </div> -->
       <div class="section">
         <TenderEvents />
       </div>
@@ -101,59 +105,6 @@ export default {
   methods: {
     afterLoad() {
       console.log("After load");
-    },
-
-    addSection(e) {
-      e.preventDefault();
-      var newSectionNumber =
-        document.querySelectorAll(".fp-section").length + 1;
-
-      // creating the section div
-      var section = document.createElement("div");
-      section.className = "section";
-      section.innerHTML = `<h3>Section ${newSectionNumber}</h3>`;
-
-      // adding section
-      document.querySelector("#fullpage").appendChild(section);
-
-      // creating the section menu element
-      var sectionMenuItem = document.createElement("li");
-      sectionMenuItem.setAttribute(
-        "data-menuanchor",
-        "page" + newSectionNumber
-      );
-      sectionMenuItem.innerHTML = `<a href="#page${newSectionNumber}">Section${newSectionNumber}</a>`;
-
-      // adding it to the sections menu
-      var sectionsMenuItems = document.querySelector("#menu");
-      sectionsMenuItems.appendChild(sectionMenuItem);
-
-      // adding anchor for the section
-      this.options.anchors.push(`page${newSectionNumber}`);
-
-      // we have to call `update` manually as DOM changes won't fire updates
-      // requires the use of the attribute ref="fullpage" on the
-      // component element, in this case, <full-page>
-      // ideally, use an ID element for that element too
-      this.$refs.fullpage.build();
-    },
-
-    removeSection() {
-      var sections = document
-        .querySelector("#fullpage")
-        .querySelectorAll(".fp-section");
-      var lastSection = sections[sections.length - 1];
-
-      // removing the last section
-      lastSection.parentNode.removeChild(lastSection);
-
-      // removing the last anchor
-      this.options.anchors.pop();
-
-      // removing the last item on the sections menu
-      var sectionsMenuItems = document.querySelectorAll("#menu li");
-      var lastItem = sectionsMenuItems[sectionsMenuItems.length - 1];
-      lastItem.parentNode.removeChild(lastItem);
     },
 
     toggleNavigation() {

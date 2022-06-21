@@ -20,9 +20,21 @@
     <p>
       “tender intelligences” is part of the B-LA connect, an exchange project to
       promote cultural partnership on a grass roots level between Berlin and Los
-      Angeles. The ehxibition will first take place at the (im)Mutable Studio in
-      Los Angeles this next summer and in the summer of 2023 at the Zentrum für
-      Netzkunst (in Berlin).
+      Angeles. The ehxibition will first take place at the
+      <a
+        href="https://www.mutable.studio/"
+        target="_blank"
+        rel="noopener noreferrer"
+        >(im)Mutable Studio</a
+      >
+      in Los Angeles this next summer and in the summer of 2023 at the
+      <a
+        href="https://netzkunst.berlin/"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Zentrum für Netzkunst</a
+      >
+      (in Berlin).
     </p>
   </div>
 </template>
