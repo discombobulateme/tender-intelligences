@@ -10,17 +10,31 @@ import MediaKit from "@/views/MediaKit.vue";
 
 <template>
   <div id="app">
-    <ul id="menu">
-      <li data-menuanchor="page1" class="active">
-        <a href="#page1">tender intelligences</a>
-      </li>
-      <li data-menuanchor="page2"><a href="#page2">about</a></li>
-      <li data-menuanchor="page3"><a href="#page3">local partners</a></li>
-      <li data-menuanchor="page4"><a href="#page4">selected works</a></li>
-      <li data-menuanchor="page5"><a href="#page5">events</a></li>
-      <li data-menuanchor="page6"><a href="#page6">contact</a></li>
-      <li data-menuanchor="page7"><a href="#page7">media kit</a></li>
-    </ul>
+    <div id="mySidenav" class="sidenav">
+      <ul id="menu">
+        <li data-menuanchor="page1" class="active" style="margin-bottom: 62px">
+          <a href="#page1">tender intelligences</a>
+        </li>
+        <li data-menuanchor="page2"><a href="#page2">about</a></li>
+        <li data-menuanchor="page3"><a href="#page3">local partners</a></li>
+        <li data-menuanchor="page4"><a href="#page4">selected works</a></li>
+        <li data-menuanchor="page5"><a href="#page5">events</a></li>
+        <li data-menuanchor="page6"><a href="#page6">contact</a></li>
+        <li data-menuanchor="page7"><a href="#page7">media kit</a></li>
+      </ul>
+      <p>this exhibition is proudly part of</p>
+      <img
+        style="height: 100px"
+        src="src/assets/bla-logo-img-removebg.png"
+        alt="BLA logo"
+      />
+      <p>& possible through the support of</p>
+      <img
+        style="width: 200px"
+        src="src/assets/moz-logo-1color-black-rgb.png"
+        alt="Mozilla logo"
+      />
+    </div>
     <full-page :options="options" id="fullpage" ref="fullpage">
       <div class="section">
         <TenderHome />
@@ -106,6 +120,14 @@ export default {
     toggleScrollbar() {
       console.log("Changing scrollbar...");
       this.options.scrollBar = !this.options.scrollBar;
+    },
+    openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+    },
+    closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft = "0";
     },
   },
 };

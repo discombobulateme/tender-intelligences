@@ -32,6 +32,12 @@
   font-weight: normal;
 }
 
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 body {
   color: var(--color-text);
   transition: color 0.5s, background-color 0.5s;
@@ -68,7 +74,7 @@ h3 {
 
 h4 {
   font-family: "Cormorant", serif;
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 400;
   line-height: 42.39px;
 }
@@ -86,29 +92,119 @@ a {
   cursor: pointer;
 }
 
-#menu-line {
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 159px;
-  height: 2px;
-  background: #fff;
+blockquote,
+body,
+dd,
+div,
+dl,
+dt,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+li,
+ol,
+p,
+pre,
+td,
+textarea,
+th,
+ul {
+  padding: 0;
+  margin: 0;
 }
-#menu {
-  position: sticky;
-  z-index: 70;
+a {
+  text-decoration: none;
+}
+table {
+  border-spacing: 0;
+}
+fieldset,
+img {
+  border: 0;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+strong {
+  font-weight: 700;
+}
+ol,
+ul {
+  list-style: none;
+}
+caption,
+th {
+  text-align: left;
+}
+q:after,
+q:before {
+  content: "";
+}
+abbr,
+acronym {
+  border: 0;
+}
+.section {
+  position: relative;
+  padding: 0 3rem 3rem 20rem;
+}
+#section-1 {
+  text-align: center;
+}
+#section-1 h2:before {
+  content: "";
+  display: inline-block;
+  height: 200px;
+  width: 232px;
+}
+#section-1 h1 {
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
-  background-color: var(--color-sidebar);
+  margin: 1.5em auto 1em auto;
 }
-#menu li {
+#section-1 li {
   display: inline-block;
-  margin: 10px 0;
+  margin: 1.25em 0.3em;
+}
+#logo {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  color: #fff;
+  font-weight: 700;
+  z-index: 99;
+  font-size: 1.9em;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+}
+
+/* sidebar */
+
+#menu li:first-child {
+  font-family: "Cormorant", serif;
+  font-size: 35px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+#menu li {
+  display: block;
   position: relative;
+  padding: 0 0 21px 30px;
 }
 #menu a {
   color: var(--color-text);
-  padding: 0 1.1em 1.1em 1.1em;
   text-decoration: none;
   font-family: "Space Mono", monospace;
   font-size: 18px;
@@ -122,4 +218,43 @@ a {
 #menu a:focus {
   text-decoration: underline;
   font-weight: 700;
+}
+
+.sidenav {
+  height: 100%;
+  width: 220px;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  background-color: var(--color-sidebar);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+}
+
+.sidenav p {
+  padding: 20px 20px 10px 30px;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.sidenav img {
+  padding: 0 20px 10px 21px;
+}
+
+#main {
+  transition: margin-left 0.5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
 }
