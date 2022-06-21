@@ -95,7 +95,7 @@ a {
   background: #fff;
 }
 #menu {
-  position: fixed;
+  position: sticky;
   z-index: 70;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
