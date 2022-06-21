@@ -12,8 +12,10 @@ import MediaKit from "@/views/MediaKit.vue";
   <div id="app">
     <div id="mySidenav" class="sidenav">
       <ul id="menu">
-        <li data-menuanchor="page1" class="active" style="margin-bottom: 62px">
-          <a href="#page1">tender intelligences</a>
+        <li data-menuanchor="page1" class="active">
+          <a style="font-size: 24px; margin-top: 21px" href="#page1"
+            >tender intelligences</a
+          >
         </li>
         <li data-menuanchor="page2"><a href="#page2">about</a></li>
         <li data-menuanchor="page3"><a href="#page3">local partners</a></li>
@@ -22,18 +24,32 @@ import MediaKit from "@/views/MediaKit.vue";
         <li data-menuanchor="page6"><a href="#page6">contact</a></li>
         <li data-menuanchor="page7"><a href="#page7">media kit</a></li>
       </ul>
-      <p>this exhibition is proudly part of</p>
-      <img
-        style="height: 100px"
-        src="src/assets/bla-logo-img-removebg.png"
-        alt="BLA logo"
-      />
-      <p>& possible through the support of</p>
-      <img
-        style="width: 200px"
-        src="src/assets/moz-logo-1color-black-rgb.png"
-        alt="Mozilla logo"
-      />
+      <div>
+        <p>this exhibition is proudly part of</p>
+        <a
+          href="https://www.b-la-connect.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            style="height: 100px"
+            src="src/assets/bla-logo-img-removebg.png"
+            alt="BLA logo"
+          />
+        </a>
+        <p>& possible through the support of</p>
+        <a
+          href="https://foundation.mozilla.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            style="width: 200px"
+            src="src/assets/moz-logo-1color-black-rgb.png"
+            alt="Mozilla logo"
+          />
+        </a>
+      </div>
     </div>
     <full-page :options="options" id="fullpage" ref="fullpage">
       <div class="section">

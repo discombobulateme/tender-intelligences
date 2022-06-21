@@ -100,12 +100,6 @@ dl,
 dt,
 fieldset,
 form,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
 input,
 li,
 ol,
@@ -157,7 +151,7 @@ acronym {
 }
 .section {
   position: relative;
-  padding: 0 3rem 3rem 20rem;
+  padding: 3rem 3rem 3rem 20rem;
 }
 #section-1 {
   text-align: center;
@@ -177,32 +171,21 @@ acronym {
   display: inline-block;
   margin: 1.25em 0.3em;
 }
-#logo {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  color: #fff;
-  font-weight: 700;
-  z-index: 99;
-  font-size: 1.9em;
-  -webkit-font-smoothing: antialiased;
-  -moz-font-smoothing: antialiased;
-}
 
 /* sidebar */
-
-#menu li:first-child {
-  font-family: "Cormorant", serif;
-  font-size: 35px;
-  font-weight: 400;
-  font-style: italic;
-}
-
 #menu li {
   display: block;
   position: relative;
   padding: 0 0 21px 30px;
 }
+
+#menu li:first-of-type{
+  font-family: "Cormorant", serif;
+  font-weight: 400;
+  font-style: italic;
+  margin-bottom: 50px;
+}
+
 #menu a {
   color: var(--color-text);
   text-decoration: none;
@@ -222,27 +205,36 @@ acronym {
 
 .sidenav {
   height: 100%;
-  width: 220px;
+  width: 245px;
+  padding-top: 21px;
   position: fixed;
+  display: flex;
   z-index: 100;
   top: 0;
   left: 0;
   background-color: var(--color-sidebar);
   overflow-x: hidden;
   transition: 0.5s;
-  padding-top: 60px;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  justify-content: space-between;
+}
+
+.sidenav div {
+  margin: 21px 0 21px 0;
 }
 
 .sidenav p {
-  padding: 20px 20px 10px 30px;
+  padding: 0 21px 21px 21px;
   font-size: 14px;
   line-height: 21px;
 }
 
 .sidenav img {
-  padding: 0 20px 10px 21px;
+  padding: 0 20px 0 21px;
 }
 
 #main {
