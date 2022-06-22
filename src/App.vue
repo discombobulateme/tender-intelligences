@@ -33,7 +33,7 @@ import MediaKit from "@/views/MediaKit.vue";
         >
           <img
             style="height: 100px"
-            src="src/assets/bla-logo-img-removebg.png"
+            src="/src/assets/bla-logo.png"
             alt="BLA logo"
           />
         </a>
@@ -45,7 +45,7 @@ import MediaKit from "@/views/MediaKit.vue";
         >
           <img
             style="width: 200px"
-            src="src/assets/moz-logo-1color-black-rgb.png"
+            src="/src/assets/mozilla-logo.png"
             alt="Mozilla logo"
           />
         </a>
