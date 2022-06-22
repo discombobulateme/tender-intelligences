@@ -6,6 +6,6 @@ module.exports = defineConfig({
       return args;
     });
   },
-  publicPath:
-    process.env.NODE_ENV === "production" ? "/tender-intelligences/" : "/",
+  publicPath: "/tender-intelligences/",
+  // process.env.NODE_ENV === "production" ? "/tender-intelligences/" : "/",
 });
