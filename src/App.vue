@@ -12,17 +12,21 @@ import MediaKit from "@/views/MediaKit.vue";
   <div id="app">
     <div id="mySidenav" class="sidenav">
       <ul id="menu">
-        <li data-menuanchor="page1" class="active">
-          <a style="font-size: 24px; margin-top: 21px" href="#page1"
+        <li data-menuanchor="home" class="active">
+          <a style="font-size: 24px; margin-top: 21px" href="#home"
             >tender intelligences</a
           >
         </li>
-        <li data-menuanchor="page2"><a href="#page2">about</a></li>
-        <li data-menuanchor="page3"><a href="#page3">local partners</a></li>
-        <li data-menuanchor="page4"><a href="#page4">selected works</a></li>
-        <li data-menuanchor="page5"><a href="#page5">events</a></li>
-        <li data-menuanchor="page6"><a href="#page6">contact</a></li>
-        <li data-menuanchor="page7"><a href="#page7">media kit</a></li>
+        <li data-menuanchor="about"><a href="#about">about</a></li>
+        <li data-menuanchor="local-partners">
+          <a href="#local-partners">local partners</a>
+        </li>
+        <li data-menuanchor="selected-works">
+          <a href="#selected-works">selected works</a>
+        </li>
+        <li data-menuanchor="events"><a href="#events">events</a></li>
+        <li data-menuanchor="contact"><a href="#contact">contact</a></li>
+        <li data-menuanchor="media-kit"><a href="#media-kit">media kit</a></li>
       </ul>
       <div>
         <p>this exhibition is proudly part of</p>
@@ -104,19 +108,19 @@ export default {
         menu: "#menu",
         navigation: true,
         anchors: [
-          "page1",
-          "page2",
-          "page3",
-          "page4",
-          "page5",
-          "page6",
-          "page7",
+          "home",
+          "about",
+          "local-partners",
+          "selected-works",
+          "events",
+          "contact",
+          "media-kit",
         ],
         sectionsColor: [
           "#F37344" /* page1 orange */,
-          "#5E9EE4" /* page2 blue */,
-          "#EBD547" /* page3 yellow */,
-          "#00BD58" /* page4 green */,
+          "#5E9EE4" /* about blue */,
+          "#EBD547" /* local-partners yellow */,
+          "#00BD58" /* selected-works green */,
           "#F37344",
           "#EBD547",
           "#5E9EE4",
