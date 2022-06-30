@@ -2,7 +2,9 @@
   <h3>selected works</h3>
   <ul>
     <li>
-      <h5>BBB_ Songs of Cyborgeoisie</h5>
+      <h5>
+        <router-link to="/bbb-songs">BBB_ Songs of Cyborgeoisie</router-link>
+      </h5>
       by BBB_ (alla popp & Alex Sahm)
     </li>
     <li>
@@ -41,6 +43,7 @@
       by Nushin Yazdani and José Rojas
     </li>
   </ul>
+  <router-view />
 </template>
 
 <style scoped>
