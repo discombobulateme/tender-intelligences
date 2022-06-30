@@ -3,7 +3,9 @@
   <ul>
     <li>
       <h5>
-        <router-link to="/bbb-songs">BBB_ Songs of Cyborgeoisie</router-link>
+        <router-link :to="{ name: 'bbb-songs' }">
+          BBB_ Songs of Cyborgeoisie
+        </router-link>
       </h5>
       by BBB_ (alla popp & Alex Sahm)
     </li>
@@ -43,7 +45,6 @@
       by Nushin Yazdani and José Rojas
     </li>
   </ul>
-  <router-view />
 </template>
 
 <style scoped>
