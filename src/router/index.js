@@ -1,7 +1,15 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 import TenderHome from "../views/TenderHome.vue";
-import ArtworkBbb from "../components/Artwork.vue";
+import BbbSongs from "../components/BbbSongs.vue";
+import QueerFeminist from "../components/QueerFeminist.vue";
+import ArtSearch from "../components/ArtSearch.vue";
+import AutonomousBodies from "../components/AutonomousBodies.vue";
+import ContextualNormalcy from "../components/ContextualNormalcy.vue";
+import CommunityIntelligence from "../components/CommunityIntelligence.vue";
+import NichtsSolide from "../components/NichtsSolide.vue";
+import PensamentoComputacional from "../components/PensamentoComputacional.vue";
+import HowMachines from "../components/HowMachines.vue";
 
 const routes = [
   {
@@ -12,7 +20,47 @@ const routes = [
   {
     path: "/bbb-songs",
     name: "bbb-songs",
-    component: ArtworkBbb,
+    component: BbbSongs,
+  },
+  {
+    path: "/queer-feminist",
+    name: "queer-feminist",
+    component: QueerFeminist,
+  },
+  {
+    path: "/art-search",
+    name: "art-search",
+    component: ArtSearch,
+  },
+  {
+    path: "/autonomous-bodies",
+    name: "autonomous-bodies",
+    component: AutonomousBodies,
+  },
+  {
+    path: "/contextual-normalcy",
+    name: "contextual-normalcy",
+    component: ContextualNormalcy,
+  },
+  {
+    path: "/community-intelligence",
+    name: "community-intelligence",
+    component: CommunityIntelligence,
+  },
+  {
+    path: "/nichts-solide",
+    name: "nichts-solide",
+    component: NichtsSolide,
+  },
+  {
+    path: "/pensamento-computacional",
+    name: "pensamento-computacional",
+    component: PensamentoComputacional,
+  },
+  {
+    path: "/how-machines",
+    name: "how-machines",
+    component: HowMachines,
   },
   {
     path: "/about",

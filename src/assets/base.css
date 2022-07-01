@@ -237,6 +237,15 @@ acronym {
   padding: 0 20px 0 21px;
 }
 
+.fichatecnica {
+  font-family: "Space Mono", monospace;
+  font-size: 25px;
+  font-style: oblique;
+  line-height: 40px;
+  font-weight: 400;
+  margin-bottom: 3rem;
+}
+
 #main {
   transition: margin-left 0.5s;
   padding: 16px;
