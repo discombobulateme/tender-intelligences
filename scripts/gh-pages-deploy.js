@@ -1,25 +1,27 @@
-/* eslint-disable no-console */
-const execa = require("execa");
-const fs = require("fs");
-(async () => {
+const execa = require('execa')
+const emoji = require('node-emoji')
+const chalk = require('chalk')
+
+const firstLog = `${emoji.get('fast_forward')} ${chalk.yellow('Building...')}`
+const secondLog = `${emoji.get('fast_forward')} ${chalk.yellow('Pushing...')}`
+const thirdLog = `${emoji.get('rocket')} ${chalk.green('Your app successfully deployed')} ${emoji.get('rocket')}`
+
+;(async () => {
   try {
-    await execa("git", ["checkout", "--orphan", "gh-pages"]);
-    // eslint-disable-next-line no-console
-    console.log("Building started...");
-    await execa("npm", ["run", "build"]);
-    // Understand if it's dist or build folder
-    const folderName = fs.existsSync("dist") ? "dist" : "build";
-    await execa("git", ["--work-tree", folderName, "add", "--all"]);
-    await execa("git", ["--work-tree", folderName, "commit", "-m", "gh-pages"]);
-    console.log("Pushing to gh-pages...");
-    await execa("git", ["push", "origin", "HEAD:gh-pages", "--force"]);
-    await execa("rm", ["-r", folderName]);
-    await execa("git", ["checkout", "-f", "master"]);
-    await execa("git", ["branch", "-D", "gh-pages"]);
-    console.log("Successfully deployed, check your settings");
+    const { stdout: currentBranch } = await execa.command('git branch --show-current')
+    await execa.command('git checkout --orphan gh-pages')
+    console.log(firstLog)
+    await execa.command('npm run build', { stdio: 'inherit' })
+    await execa.command('git --work-tree dist add --all')
+    await execa.command('git --work-tree dist commit -m "gh-pages"')
+    console.log(secondLog)
+    await execa.command('git push origin HEAD:gh-pages --force', { stdio: 'inherit' })
+    await execa.command('rm -r dist')
+    await execa.command(`git checkout -f ${currentBranch}`)
+    await execa.command('git branch -D gh-pages')
+    console.log(thirdLog)
   } catch (e) {
-    // eslint-disable-next-line no-console
-    console.log(e.message);
-    process.exit(1);
+    console.log(e.message)
+    process.exit(1)
   }
-})();
+})()

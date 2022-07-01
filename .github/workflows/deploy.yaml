@@ -1,6 +1,8 @@
 name: Deploy Vue
 on:
   push:
+    branches:
+      - main
 jobs:
   build_vue:
     runs-on: ubuntu-latest
