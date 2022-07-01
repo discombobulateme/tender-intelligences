@@ -1,27 +1,30 @@
 <script setup></script>
 
 <template>
-  <h3>BBB_ Songs of Cyborgeoisie</h3>
+  <h3>Queer Feminist AI</h3>
+  <p class="fichatecnica">AR Face Filter, 2022</p>
   <p>
-    BBB_ Songs of Cyborgeoisie is a speculation about a queer evolutionary
-    scenario of technologies, people, flora and fauna on Earth. It narrates
-    about our world in the near future and enables a journey through feelings,
-    fears and hopes of the worlds beings.
+    Queer Feminist AI - a game character from the latest project by BBB_, the
+    "Songs of Cyborgeoisie", is intimidating and strong, soft-tempered and
+    steel-bodied Artificial General Intelligence - an uncanny, techno-futuristic
+    humanoid robot, indistinguishably intellectually intelligent, but still
+    controllable, hardwired vessel for digital soul with a capacity to feel,
+    dream and master unbound creativity. The face-filter "Queer Feminist AI" is
+    an opportunity to transpose, a performative social media element, which
+    could entertain, but foremost foster a non-linear conversation on what are
+    all the things that artificial intelligence technology is, and of what it is
+    not.
   </p>
+  <h4>about the artists</h4>
   <p>
-    Along with other inhabitants of the Robear Rehab - a rehabilitation center
-    in a fantasy Universe of Cyborgeoisie - the AI character shares trauma of
-    their feminine antagonist status quo in pop-cultural narratives on digital
-    technology and its prescribed role in technological futures.
-  </p>
-  <p>
-    While AGI is idolized and fetishised, injured or murdered, subordinated and
-    generally dramatised, varieties of artificial intelligence technologies
-    infiltrate all spheres of life, reinforce human bias, and thus foster
-    automated inequality in the present, making non-dystopian futures impossible
-    to imagine. What kind of narratives do we need to shift and alter
-    pop-cultural understanding of the artificial intelligences? How can such
-    stories be accessible to a wider audience, but still down to earth and
-    unsimplified?
+    allapopp (no pronouns) is a digital media and performance artist from Kazan
+    Russia. allapopp studied Electronic Media and Performance at the University
+    of Art and Design Offenbach, Tongji University and Athens School of Fine
+    arts. allapopp’s queer gaze focuses on tech-positive visions of the future
+    and feminist perspectives on digital technologies. allapopp formally works
+    at the intersection of digital media, performance and music, interactive
+    live online & hybrid formats and experiences in VR, AR, XR and web. allapopp
+    is part of the the interdisciplinary music and performance project BBB_ and
+    Berlin based collective dgtl fmnsm.
   </p>
 </template>

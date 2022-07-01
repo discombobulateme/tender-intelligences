@@ -1,27 +1,17 @@
 <script setup></script>
 
 <template>
-  <h3>BBB_ Songs of Cyborgeoisie</h3>
+  <h3>Community of Intelligence</h3>
+  <p class="fichatecnica">Sound installation, 2021</p>
   <p>
-    BBB_ Songs of Cyborgeoisie is a speculation about a queer evolutionary
-    scenario of technologies, people, flora and fauna on Earth. It narrates
-    about our world in the near future and enables a journey through feelings,
-    fears and hopes of the worlds beings.
+    A community of intelligence and the intelligence of community. A meditation
+    to become aware of all the communities that are sustained by the earth.
+    Living and non-living: Bacteria, fungus, virus, algae, plants, insects, sea
+    animals, land animals, birds, humans, machines, stones, rivers, mountains,
+    volcanoes, seas and oceans…maybe some extra-terrestrial life forms benefit
+    from the bounty of our planet … we are one of many communities doing their
+    best to survive, to thrive, seeking to find their place in the world.
   </p>
-  <p>
-    Along with other inhabitants of the Robear Rehab - a rehabilitation center
-    in a fantasy Universe of Cyborgeoisie - the AI character shares trauma of
-    their feminine antagonist status quo in pop-cultural narratives on digital
-    technology and its prescribed role in technological futures.
-  </p>
-  <p>
-    While AGI is idolized and fetishised, injured or murdered, subordinated and
-    generally dramatised, varieties of artificial intelligence technologies
-    infiltrate all spheres of life, reinforce human bias, and thus foster
-    automated inequality in the present, making non-dystopian futures impossible
-    to imagine. What kind of narratives do we need to shift and alter
-    pop-cultural understanding of the artificial intelligences? How can such
-    stories be accessible to a wider audience, but still down to earth and
-    unsimplified?
-  </p>
+  <h4>about the artists</h4>
+  <p>Tabita Rezaire</p>
 </template>

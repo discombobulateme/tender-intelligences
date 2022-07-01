@@ -1,27 +1,36 @@
 <script setup></script>
 
 <template>
-  <h3>BBB_ Songs of Cyborgeoisie</h3>
+  <h3>How machines discriminate</h3>
+  <p class="fichatecnica">Video, 2020</p>
   <p>
-    BBB_ Songs of Cyborgeoisie is a speculation about a queer evolutionary
-    scenario of technologies, people, flora and fauna on Earth. It narrates
-    about our world in the near future and enables a journey through feelings,
-    fears and hopes of the worlds beings.
+    Machine learning systems have long been ubiquitous in our everyday lives.
+    Human decisions are increasingly being outsourced to supposedly intelligent
+    machines in order to simplify work processes and make them more efficient.
+    These machines not only recognize faces, they also sort job applications,
+    influence court cases, determine who should get a loan, decide on police
+    operations and control border crossings. And it is becoming increasingly
+    apparent that they are making racist, sexist or other discriminatory
+    decisions in the process.
   </p>
   <p>
-    Along with other inhabitants of the Robear Rehab - a rehabilitation center
-    in a fantasy Universe of Cyborgeoisie - the AI character shares trauma of
-    their feminine antagonist status quo in pop-cultural narratives on digital
-    technology and its prescribed role in technological futures.
+    In this video, Alice and Maxi explore what exactly lies behind these
+    algorithmic decision-making systems, for example, what emotion recognition
+    reads from the faces of black basketball players, what facial recognition
+    has to do with front doors, and why appearance can influence advertisements.
   </p>
+  <h4>about the artists</h4>
+  <p>Nushin Yazdani and José Rojas</p>
   <p>
-    While AGI is idolized and fetishised, injured or murdered, subordinated and
-    generally dramatised, varieties of artificial intelligence technologies
-    infiltrate all spheres of life, reinforce human bias, and thus foster
-    automated inequality in the present, making non-dystopian futures impossible
-    to imagine. What kind of narratives do we need to shift and alter
-    pop-cultural understanding of the artificial intelligences? How can such
-    stories be accessible to a wider audience, but still down to earth and
-    unsimplified?
+    <a
+      href=" https://nushinyazdani.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+      >Nushin Yazdani</a
+    >
+    is a transformation designer, artist and AI design researcher. She works at
+    the intersection of machine learning, design justice and intersectional
+    feminist practices, and writes about the systems of oppression of the
+    present and the possibilities of just and free futures.
   </p>
 </template>

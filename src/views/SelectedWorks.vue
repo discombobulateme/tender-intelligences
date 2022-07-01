@@ -74,6 +74,7 @@
       by Nushin Yazdani and José Rojas
     </li>
   </ul>
+  <router-view></router-view>
 </template>
 
 <style scoped>
