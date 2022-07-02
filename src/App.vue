@@ -21,7 +21,7 @@ import MediaKit from "@/views/MediaKit.vue";
         <li data-menuanchor="local-partners">
           <a href="#local-partners">local partners</a>
         </li>
-        <li data-menuanchor="selected-works">
+        <li data-menuanchor="selected-works" id="selected-works">
           <a href="#selected-works">selected works</a>
         </li>
         <li data-menuanchor="events"><a href="#events">events</a></li>

@@ -239,11 +239,21 @@ acronym {
 
 .fichatecnica {
   font-family: "Space Mono", monospace;
-  font-size: 25px;
+  font-size: 20px;
   font-style: oblique;
   line-height: 40px;
   font-weight: 400;
   margin-bottom: 3rem;
+  margin-top: -3rem;
+}
+
+.artworks {
+  background-color: var(--color-sidebar);
+  padding: 0.5rem;
+}
+
+#selected-works{
+  display: flex;
 }
 
 #main {
