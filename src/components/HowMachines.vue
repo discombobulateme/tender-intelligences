@@ -22,18 +22,20 @@
       advertisements.
     </p>
     <br />
-    <h4>Nushin Yazdani and José Rojas</h4>
-    <p>
+    <h4>
       <a
         href=" https://nushinyazdani.com/"
         target="_blank"
         rel="noopener noreferrer"
         >Nushin Yazdani</a
       >
-      is a transformation designer, artist and AI design researcher. She works
-      at the intersection of machine learning, design justice and intersectional
-      feminist practices, and writes about the systems of oppression of the
-      present and the possibilities of just and free futures.
+      & José Rojas
+    </h4>
+    <p>
+      Nushin is a transformation designer, artist and AI design researcher. She
+      works at the intersection of machine learning, design justice and
+      intersectional feminist practices, and writes about the systems of
+      oppression of the present and the possibilities of just and free futures.
     </p>
   </div>
 </template>

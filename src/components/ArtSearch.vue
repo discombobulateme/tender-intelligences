@@ -3,7 +3,7 @@
 <template>
   <div class="artworks">
     <h3>Art Search</h3>
-    <p class="fichatecnica">Interactive Installation, 2022</p>
+    <p class="fichatecnica">Interactive Installation, 2021 - current</p>
     <p>
       Framing our newest digital capabilities as artifacts on a continuum of
       technological development, ML and facial recognition were reimagined as
@@ -18,8 +18,19 @@
       illuminates and obscures our experience of information.
     </p>
     <br />
-    <h4>Art Search Community</h4>
+    <h4>Feminist AI</h4>
+    <p>
+      Feminist.AI puts technology into the hands of more makers, researchers,
+      thinkers, and learners by amplifying unheard voices that, in turn, make AI
+      accessible for all. We actively imagine and secure spaces for
+      intergenerational BIPOC and LGBTQIA+ womxn and non-binary folks gather to
+      build unimagined tech together that is directly an expression of our
+      cultures, stories, identities, and experiences. We want tech to be unique
+      as ourselves.
+    </p>
+    <br />
     <ul>
+      <strong>Art Search Community</strong>
       <li>Karina Lopez</li>
       <li>Viv Pitter</li>
       <li>Anna Cho-Son</li>
