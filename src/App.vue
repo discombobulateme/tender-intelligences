@@ -117,7 +117,7 @@ export default {
           "media-kit",
         ],
         sectionsColor: [
-          "#F37344" /* page1 orange */,
+          "#F37344" /* landpage orange */,
           "#5E9EE4" /* about blue */,
           "#EBD547" /* local-partners yellow */,
           "#00BD58" /* selected-works green */,
