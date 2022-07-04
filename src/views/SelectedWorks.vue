@@ -1,6 +1,6 @@
 <template>
   <h3>selected works</h3>
-  <ul>
+  <ul class="selected-works-list">
     <li>
       <h5>
         <router-link :to="{ name: 'bbb-songs' }">
