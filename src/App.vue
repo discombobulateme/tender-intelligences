@@ -6,69 +6,77 @@ import SelectedWorks from "@/views/SelectedWorks.vue";
 import TenderContact from "@/views/TenderContact.vue";
 import TenderEvents from "@/views/TenderEvents.vue";
 import MediaKit from "@/views/MediaKit.vue";
+
+import { Push } from "vue3-burger-menu";
 </script>
 
 <template>
   <div id="app">
     <div id="mySidenav" class="sidenav">
-      <ul id="menu">
-        <li data-menuanchor="home" class="active">
-          <a style="font-size: 24px; margin-top: 21px" href="#home"
-            >tender intelligences</a
+      <Push @openMenu="openMenu" @closeMenu="closeMenu">
+        <ul id="menu">
+          <li data-menuanchor="home" class="active">
+            <a style="font-size: 24px; margin-top: 21px" href="#home"
+              >tender intelligences</a
+            >
+          </li>
+          <li data-menuanchor="about"><a href="#about">about</a></li>
+          <li data-menuanchor="local-partners">
+            <a href="#local-partners">local partners</a>
+          </li>
+          <li data-menuanchor="selected-works" id="selected-works">
+            <a href="#selected-works">selected works</a>
+          </li>
+          <li data-menuanchor="events"><a href="#events">events</a></li>
+          <li data-menuanchor="contact"><a href="#contact">contact</a></li>
+          <li data-menuanchor="media-kit">
+            <a href="#media-kit">media kit</a>
+          </li>
+        </ul>
+        <div>
+          <p>this exhibition is proudly part of</p>
+          <a
+            href="https://www.b-la-connect.org/"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-        </li>
-        <li data-menuanchor="about"><a href="#about">about</a></li>
-        <li data-menuanchor="local-partners">
-          <a href="#local-partners">local partners</a>
-        </li>
-        <li data-menuanchor="selected-works" id="selected-works">
-          <a href="#selected-works">selected works</a>
-        </li>
-        <li data-menuanchor="events"><a href="#events">events</a></li>
-        <li data-menuanchor="contact"><a href="#contact">contact</a></li>
-        <li data-menuanchor="media-kit"><a href="#media-kit">media kit</a></li>
-      </ul>
-      <div>
-        <p>this exhibition is proudly part of</p>
-        <a
-          href="https://www.b-la-connect.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            style="height: 100px"
-            src="/src/assets/bla-logo.png"
-            alt="BLA logo"
-          />
-        </a>
-        <p>& possible through the support of</p>
-        <a
-          href="https://foundation.mozilla.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            style="width: 200px"
-            src="/src/assets/mozilla-logo.png"
-            alt="Mozilla logo"
-          />
-        </a>
-      </div>
+            <img
+              style="height: 100px"
+              src="/src/assets/bla-logo.png"
+              alt="BLA logo"
+            />
+          </a>
+          <p>& possible through the support of</p>
+          <a
+            href="https://foundation.mozilla.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              style="width: 200px"
+              src="/src/assets/mozilla-logo.png"
+              alt="Mozilla logo"
+            />
+          </a>
+        </div>
+      </Push>
     </div>
-    <full-page :options="options" id="fullpage" ref="fullpage">
-      <div class="section">
-        <TenderHome />
-      </div>
-      <div class="section">
-        <TenderAbout />
-      </div>
-      <div class="section">
-        <LocalPartners />
-      </div>
-      <div class="section">
-        <SelectedWorks />
-      </div>
-      <!-- <div class="section">
+    <Menu>
+      <main id="page-wrap">
+        <full-page :options="options" id="fullpage" ref="fullpage">
+          <div class="section">
+            <TenderHome />
+          </div>
+          <div class="section">
+            <TenderAbout />
+          </div>
+          <div class="section">
+            <LocalPartners />
+          </div>
+          <div class="section">
+            <SelectedWorks />
+          </div>
+          <!-- <div class="section">
         <div class="slide">
           <h3>SLIDESSSS</h3>
         </div>
@@ -79,16 +87,18 @@ import MediaKit from "@/views/MediaKit.vue";
           <h3>selected works 2</h3>
         </div>
       </div> -->
-      <div class="section">
-        <TenderEvents />
-      </div>
-      <div class="section">
-        <TenderContact />
-      </div>
-      <div class="section">
-        <MediaKit />
-      </div>
-    </full-page>
+          <div class="section">
+            <TenderEvents />
+          </div>
+          <div class="section">
+            <TenderContact />
+          </div>
+          <div class="section">
+            <MediaKit />
+          </div>
+        </full-page>
+      </main>
+    </Menu>
   </div>
 </template>
 
@@ -148,6 +158,12 @@ export default {
     closeNav() {
       document.getElementById("mySidenav").style.width = "0";
       document.getElementById("main").style.marginLeft = "0";
+    },
+    openMenu() {
+      console.log("menu open");
+    },
+    closeMenu() {
+      console.log("menu close");
     },
   },
 };
