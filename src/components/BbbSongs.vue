@@ -30,18 +30,13 @@
       can such stories be accessible to a wider audience, but still down to
       earth and unsimplified?
     </p>
-    <h4>allapopp</h4>
-    <p>
-      allapopp (no pronouns) is a digital media and performance artist from
-      Kazan Russia. allapopp studied Electronic Media and Performance at the
-      University of Art and Design Offenbach, Tongji University and Athens
-      School of Fine arts. allapopp’s queer gaze focuses on tech-positive
-      visions of the future and feminist perspectives on digital technologies.
-      allapopp formally works at the intersection of digital media, performance
-      and music, interactive live online & hybrid formats and experiences in VR,
-      AR, XR and web. allapopp is part of the the interdisciplinary music and
-      performance project BBB_ and Berlin based collective dgtl fmnsm.
-    </p>
+    <br />
+    <h4>
+      <a href="http://allapopp.com/" target="_blank" rel="noopener noreferrer"
+        >allapopp</a
+      >
+      & Alex Sahm
+    </h4>
     <br />
     <p>
       BBB_ (allapopp & Alex Sahm) is a technologically advanced
@@ -53,5 +48,22 @@
       self-perception, altered by socially and emotionally intelligent digital
       technologies.
     </p>
+    <br />
+    <ul>
+      <strong>Credits</strong>
+      <li>Songs of Cyborgeoisie.game by BBB_ (allapopp & Alex Sahm)</li>
+      <li>Concept, story & artistic direction: BBB_ (allapopp & Alex Sahm)</li>
+      <li>Visual Game & World Design: Lixing Yang</li>
+      <li>
+        Unreal Engine implementation and programming, technical direction: Simon
+        Kohl
+      </li>
+      <li>UI, Visual Identity & Game Logo Design: Teresa Schoenherr</li>
+      <li>Character design: Alla Popp, Valentin Oellers, Lars Thomas</li>
+      <li>
+        Music: written and produced by Alex Sahm, co-production lyrics and
+        vocals by allapopp
+      </li>
+    </ul>
   </div>
 </template>

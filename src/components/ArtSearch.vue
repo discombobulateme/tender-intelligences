@@ -3,7 +3,7 @@
 <template>
   <div class="artworks">
     <h3>Art Search</h3>
-    <p class="fichatecnica">Interactive Installation, 2022</p>
+    <p class="fichatecnica">Interactive Installation, 2021 - current</p>
     <p>
       Framing our newest digital capabilities as artifacts on a continuum of
       technological development, ML and facial recognition were reimagined as
@@ -17,7 +17,43 @@
       linear narrative of progress, showing how each technological layer both
       illuminates and obscures our experience of information.
     </p>
-    <h4>about the artists</h4>
-    <p></p>
+    <br />
+    <h4>Feminist AI</h4>
+    <p>
+      Feminist.AI puts technology into the hands of more makers, researchers,
+      thinkers, and learners by amplifying unheard voices that, in turn, make AI
+      accessible for all. We actively imagine and secure spaces for
+      intergenerational BIPOC and LGBTQIA+ womxn and non-binary folks gather to
+      build unimagined tech together that is directly an expression of our
+      cultures, stories, identities, and experiences. We want tech to be unique
+      as ourselves.
+    </p>
+    <br />
+    <ul>
+      <strong>Art Search Community</strong>
+      <li>Karina Lopez</li>
+      <li>Viv Pitter</li>
+      <li>Anna Cho-Son</li>
+      <li>Sai Tripathi</li>
+      <li>Laila Brown</li>
+      <li>Kryzia Monroy</li>
+    </ul>
+    <br />
+    <strong> Art Search Expanded Community</strong>
+    <p>
+      Our extended team includes folks new to the project or who have loosely
+      been working on the project over the past year.
+    </p>
+    <ul>
+      <li>Lily Cheng</li>
+      <li>Varshini Vijay</li>
+      <li>Anjni Shah</li>
+      <li>Elizabeth Cruz-Nakamura</li>
+      <li>Danielle Knutson</li>
+      <li>Sarah Cheung</li>
+      <li>Christine Meinders</li>
+      <li>Michelle Gong Matt</li>
+      <li>Asato-Adams</li>
+    </ul>
   </div>
 </template>

@@ -16,7 +16,12 @@
       foster a non-linear conversation on what are all the things that
       artificial intelligence technology is, and of what it is not.
     </p>
-    <h4>allapopp</h4>
+    <br />
+    <h4>
+      <a href="http://allapopp.com/" target="_blank" rel="noopener noreferrer"
+        >allapopp</a
+      >
+    </h4>
     <p>
       allapopp (no pronouns) is a digital media and performance artist from
       Kazan Russia. allapopp studied Electronic Media and Performance at the

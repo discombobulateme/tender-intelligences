@@ -133,10 +133,6 @@ th,
 strong {
   font-weight: 700;
 }
-ol,
-ul {
-  list-style: none;
-}
 caption,
 th {
   text-align: left;
@@ -149,6 +145,7 @@ abbr,
 acronym {
   border: 0;
 }
+
 .section {
   position: relative;
   padding: 3rem 3rem 3rem 20rem;
@@ -168,7 +165,7 @@ acronym {
   margin: 1.5em auto 1em auto;
 }
 #section-1 li {
-  display: inline-block;
+  /* display: inline-block; */
   margin: 1.25em 0.3em;
 }
 
@@ -179,7 +176,7 @@ acronym {
   padding: 0 0 21px 30px;
 }
 
-#menu li:first-of-type{
+#menu li:first-of-type {
   font-family: "Cormorant", serif;
   font-weight: 400;
   font-style: italic;
@@ -252,8 +249,22 @@ acronym {
   padding: 0.5rem;
 }
 
-#selected-works{
+.artworks li {
+  list-style: none;
+  display: list-item;
+}
+
+.artwork li:after {
+  content: "\A";
+  white-space: pre;
+}
+
+#selected-works {
   display: flex;
+}
+
+.selected-works-list ul {
+  display: grid;
 }
 
 #main {
