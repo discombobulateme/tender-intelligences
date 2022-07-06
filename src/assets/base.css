@@ -41,6 +41,7 @@
 body {
   color: var(--color-text);
   transition: color 0.5s, background-color 0.5s;
+  background-color: var(--color-sidebar);
   font-family: "Space Mono", monospace;
   font-size: 18px;
   line-height: 26.66px;
@@ -148,7 +149,7 @@ acronym {
 
 .section {
   position: relative;
-  padding: 3rem 3rem 3rem 20rem;
+  padding: 0 2rem 0 3rem;
 }
 #section-1 {
   text-align: center;
@@ -174,6 +175,7 @@ acronym {
   display: block;
   position: relative;
   padding: 0 0 21px 30px;
+  color: var(--color-text);
 }
 
 #menu li:first-of-type {
@@ -200,12 +202,42 @@ acronym {
   font-weight: 700;
 }
 
+.bm-menu {
+  background-color: var(--color-sidebar);
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  /* flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  justify-content: space-between;
+  margin: 0; */
+  padding-top: 15px;
+}
+
+.bm-item-list {
+  color: var(--color-text);
+  margin: 0;
+  font-size: 18px;
+}
+
+.bm-item-list > * {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: contents;
+  text-decoration: none;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
+}
+
+.bm-overlay {
+  background: var(--color-sidebar);
+}
+
 .sidenav {
   height: 100%;
-  width: 245px;
+  width: 80px;
   padding-top: 21px;
   position: fixed;
-  display: flex;
   z-index: 100;
   top: 0;
   left: 0;
@@ -214,14 +246,6 @@ acronym {
   transition: 0.5s;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-content: flex-start;
-  justify-content: space-between;
-}
-
-.sidenav div {
-  margin: 21px 0 21px 0;
 }
 
 .sidenav p {
