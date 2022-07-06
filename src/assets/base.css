@@ -206,11 +206,6 @@ acronym {
   background-color: var(--color-sidebar);
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
-  /* flex-direction: column;
-  flex-wrap: nowrap;
-  align-content: flex-start;
-  justify-content: space-between;
-  margin: 0; */
   padding-top: 15px;
 }
 
