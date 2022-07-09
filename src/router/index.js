@@ -58,13 +58,30 @@ const router = createRouter({
   routes,
 })
 
+/* 
+  This callback runs before every route change. It takes the "order" meta value
+  associated with both "to" and "from" routes, and calculates what should the
+  transition be based on the order of the routes.
+*/
 router.afterEach((to, from) => {
   const toOrder = to.meta.order
   const fromOrder = from.meta.order
-  if (!fromOrder) to.meta.transitionName = undefined
-  const transition = toOrder > fromOrder ? 'slide-up' : 'slide-down'
-  console.log('transition: ', transition)
-  to.meta.transitionName = transition
+  if (fromOrder === undefined) {
+    to.meta.transitionName = 'default'
+  } else if (
+    toOrder === 0 &&
+    fromOrder === Math.max(...routes.map((route) => route.meta.order))
+  ) {
+    to.meta.transitionName = 'slide-up'
+  } else if (
+    toOrder === Math.max(...routes.map((route) => route.meta.order)) &&
+    fromOrder === 0
+  ) {
+    to.meta.transitionName = 'slide-down'
+  } else {
+    const transition = toOrder > fromOrder ? 'slide-up' : 'slide-down'
+    to.meta.transitionName = transition
+  }
 })
 
 export default router
