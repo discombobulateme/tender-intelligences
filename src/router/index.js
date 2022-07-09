@@ -13,6 +13,11 @@ import HowMachines from "../components/HowMachines.vue";
 
 const routes = [
   {
+    path: "/",
+    name: "main",
+    component: TenderHome,
+  },
+  {
     path: "/home",
     name: "home",
     component: TenderHome,
