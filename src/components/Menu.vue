@@ -4,7 +4,7 @@
 </script>
 
 <template>
-  <div class="menu-container">
+  <div class="sidebar">
     <ul id="menu">
       <li>
         <router-link to="/">tender intelligences</router-link>
@@ -32,7 +32,7 @@
 </template>
 
 <style scoped>
-  .menu-container {
+  .sidebar {
     padding: 40px;
   }
 </style>
