@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="view-container">
     <h3>local partners</h3>
     <p>
       Our curatorial work was only possible through a close collaboration with
@@ -54,3 +54,9 @@
     </p>
   </div>
 </template>
+
+<style scoped>
+  .view-container {
+    background-color: var(--color-yellow);
+  }
+</style>

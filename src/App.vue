@@ -1,162 +1,33 @@
 <script setup>
-// Optional. When using fullpage extensions
-// import './fullpage.scrollHorizontally.min'
+  import { ref, onMounted } from 'vue'
+  import Menu from '@/components/Menu.vue'
 
-import { ref, onMounted } from "vue";
+  const menuOpen = ref(true)
 
-import TenderHome from "@/views/TenderHome.vue";
-import TenderAbout from "@/views/TenderAbout.vue";
-import LocalPartners from "@/views/LocalPartners.vue";
-import SelectedWorks from "@/views/SelectedWorks.vue";
-import TenderContact from "@/views/TenderContact.vue";
-import TenderEvents from "@/views/TenderEvents.vue";
-import MediaKit from "@/views/MediaKit.vue";
-
-const menuOpen = ref(true);
-
-const options = {
-  licenseKey: "YOUR_KEY_HERE",
-  afterLoad: this.afterLoad,
-  scrollOverflow: true,
-  scrollBar: false,
-  menu: "#menu",
-  navigation: true,
-  anchors: [
-    "home",
-    "about",
-    "local-partners",
-    "selected-works",
-    "events",
-    "contact",
-    "media-kit",
-  ],
-  sectionsColor: [
-    "#F37344" /* landpage orange */,
-    "#5E9EE4" /* about blue */,
-    "#EBD547" /* local-partners yellow */,
-    "#00BD58" /* selected-works green */,
-    "#F37344",
-    "#EBD547",
-    "#5E9EE4",
-  ],
-};
-
-onMounted(() => {});
-
-// function afterLoad() {
-//   console.log("After load");
-// }
-
-// function toggleNavigation() {
-//   this.options.navigation = !this.options.navigation;
-// }
-
-// function toggleScrollbar() {
-//   console.log("Changing scrollbar...");
-//   this.options.scrollBar = !this.options.scrollBar;
-// }
-// function openNav() {
-//   document.getElementById("mySidenav").style.width = "250px";
-//   document.getElementById("main").style.marginLeft = "250px";
-// }
-// function closeNav() {
-//   document.getElementById("mySidenav").style.width = "0";
-//   document.getElementById("main").style.marginLeft = "0";
-// }
-// function openMenu() {
-//   console.log("menu open");
-// }
-// function closeMenu() {
-//   console.log("menu close");
-// }
+  onMounted(() => {})
 </script>
 
 <template>
-  <div id="app">
-    <div id="mySidenav" class="sidenav" :class="{ open: menuOpen }">
-      <ul id="menu">
-        <li data-menuanchor="home" class="active">
-          <a href="#home">tender intelligences</a>
-        </li>
-        <li data-menuanchor="about"><a href="#about">about</a></li>
-        <li data-menuanchor="local-partners">
-          <a href="#local-partners">local partners</a>
-        </li>
-        <li data-menuanchor="selected-works" id="selected-works">
-          <a href="#selected-works">selected works</a>
-        </li>
-        <li data-menuanchor="events"><a href="#events">events</a></li>
-        <li data-menuanchor="contact"><a href="#contact">contact</a></li>
-        <li data-menuanchor="media-kit">
-          <a href="#media-kit">media kit</a>
-        </li>
-      </ul>
-      <div>
-        <p>this exhibition is proudly part of</p>
-        <a
-          href="https://www.b-la-connect.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="/src/assets/bla-logo.png" alt="BLA logo" />
-        </a>
-        <p>& possible through the support of</p>
-        <a
-          href="https://foundation.mozilla.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="/src/assets/mozilla-logo.png" alt="Mozilla logo" />
-        </a>
-      </div>
-    </div>
-    <main>
-      <full-page :options="options" id="fullpage" ref="fullpage">
-        <div class="section">
-          <TenderHome />
-        </div>
-        <div class="section">
-          <TenderAbout />
-        </div>
-        <div class="section">
-          <LocalPartners />
-        </div>
-        <div class="section">
-          <SelectedWorks />
-        </div>
-        <!-- <div class="section">
-        <div class="slide">
-          <h3>SLIDESSSS</h3>
-        </div>
-        <div class="slide">
-          <h3>selected works 2</h3>
-        </div>
-        <div class="slide">
-          <h3>selected works 2</h3>
-        </div>
-      </div> -->
-        <div class="section">
-          <TenderEvents />
-        </div>
-        <div class="section">
-          <TenderContact />
-        </div>
-        <div class="section">
-          <MediaKit />
-        </div>
-      </full-page>
-    </main>
+  <div class="main-container">
+    <Menu class="menu" />
+    <router-view v-slot="{ Component, route }" class="main-view-container">
+      <transition :name="route.meta.transitionName">
+        <component :is="Component" :key="route.path" />
+      </transition>
+    </router-view>
   </div>
 </template>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,700;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap");
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
+  .menu {
+    position: fixed;
+    width: 20%;
+    height: 100vh;
+  }
+
+  .main-view-container {
+    width: 80%;
+    height: 100vh;
+    margin-left: 20%;
+  }
 </style>

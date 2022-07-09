@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="view-container">
     <h3>contact</h3>
     <p>
       for questions or more information on the exhibition please reach out
@@ -8,3 +8,17 @@
     </p>
   </div>
 </template>
+
+<style scoped>
+  .view-container {
+    background-color: var(--color-yellow);
+  }
+
+  div {
+    margin-bottom: 5rem;
+  }
+
+  h4 {
+    margin-bottom: 20px;
+  }
+</style>
