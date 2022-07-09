@@ -4,7 +4,8 @@
 :root {
   --color-text: rgb(0 0 0);
   --section-gap: 160px;
-  --color-sidebar: rgb(163 163 143);
+  --color-base: rgb(163 163 143);
+  --color-sidebar:var(--color-base);
   --color-orange: rgb(243 115 68);
   --color-blue: rgb(94 158 228);
   --color-green: rgb(0 189 88);
@@ -36,12 +37,17 @@
   box-sizing: border-box;
 }
 
-body {
+html, body, #app{
+  padding: 0;  
+  margin: 0;
+  background-color: var(--color-base);
+}
+
+body, #app {
   font-family: "Space Mono", monospace;
   font-size: 18px;
   line-height: 26.66px;
   color: var(--color-text);
-  background-color: var(--color-sidebar);
   transition: color 0.5s, background-color 0.5s;
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
@@ -152,6 +158,7 @@ acronym {
 
 .view-container{
   width: 80%;
+  height: fit-content;
   min-height: 100vh;
   padding: 50px 100px;
 }
@@ -362,4 +369,14 @@ acronym {
 .slide-down-leave-to {
   position: absolute;
   top: 100vh;
+}
+
+.default-enter-active,
+.default-leave-active,
+.default-leave-to,
+.default-enter-to,
+.default-enter-from,
+.default-leave-from {
+  position: absolute;
+  top: 0;
 }
