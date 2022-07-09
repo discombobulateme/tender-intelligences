@@ -1,12 +1,14 @@
+@import 'https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,700;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap';
+
 /* semantic color variables for this project */
 :root {
-  --color-text: #000000;
+  --color-text: rgb(0 0 0);
   --section-gap: 160px;
-  --color-sidebar: #a3a38f;
-  --color-orange: #f37344;
-  --color-blue: #5e9ee4;
-  --color-green: #00bd58;
-  --color-yellow: #ebd547;
+  --color-sidebar: rgb(163 163 143);
+  --color-orange: rgb(243 115 68);
+  --color-blue: rgb(94 158 228);
+  --color-green: rgb(0 189 88);
+  --color-yellow: rgb(235 213 71);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,10 +16,8 @@
     --color-background: var(--vt-c-black);
     --color-background-soft: var(--vt-c-black-soft);
     --color-background-mute: var(--vt-c-black-mute);
-
     --color-border: var(--vt-c-divider-dark-2);
     --color-border-hover: var(--vt-c-divider-dark-1);
-
     --color-heading: var(--vt-c-text-dark-1);
     --color-text: var(--vt-c-text-dark-2);
   }
@@ -26,70 +26,69 @@
 *,
 *::before,
 *::after {
+  position: relative;
   box-sizing: border-box;
   margin: 0;
-  position: relative;
   font-weight: normal;
 }
 
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 body {
-  color: var(--color-text);
-  transition: color 0.5s, background-color 0.5s;
-  background-color: var(--color-sidebar);
   font-family: "Space Mono", monospace;
   font-size: 18px;
   line-height: 26.66px;
-  text-rendering: optimizeLegibility;
+  color: var(--color-text);
+  background-color: var(--color-sidebar);
+  transition: color 0.5s, background-color 0.5s;
+  text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 h1 {
-  font-family: "Cormorant", serif;
-  font-size: 105px;
-  line-height: 127.16px;
-  font-weight: 700;
   margin-bottom: 2rem;
+  font-family: Cormorant, serif;
+  font-size: 105px;
+  font-weight: 700;
+  line-height: 127.16px;
 }
 
 h2 {
   font-family: "Space Mono", monospace;
   font-size: 28px;
-  line-height: 41.47px;
   font-weight: 400;
+  line-height: 41.47px;
 }
 
 h3 {
-  font-family: "Cormorant", serif;
-  font-size: 35px;
-  line-height: 42.39px;
-  font-weight: 700;
   margin-bottom: 3rem;
+  font-family: Cormorant, serif;
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 42.39px;
 }
 
 h4 {
-  font-family: "Cormorant", serif;
+  font-family: Cormorant, serif;
   font-size: 28px;
   font-weight: 400;
   line-height: 42.39px;
 }
 
 h5 {
-  font-family: "Cormorant", serif;
+  font-family: Cormorant, serif;
   font-size: 25px;
   font-weight: 400;
 }
 
 a {
+  font-weight: 700;
   color: var(--color-text);
   text-decoration: underline;
-  font-weight: 700;
+  text-decoration: none;
   cursor: pointer;
 }
 
@@ -113,16 +112,16 @@ ul {
   padding: 0;
   margin: 0;
 }
-a {
-  text-decoration: none;
-}
+
 table {
   border-spacing: 0;
 }
+
 fieldset,
 img {
   border: 0;
 }
+
 address,
 caption,
 cite,
@@ -130,67 +129,89 @@ code,
 dfn,
 em,
 strong,
-th,
-strong {
+th {
   font-weight: 700;
 }
+
 caption,
 th {
   text-align: left;
 }
-q:after,
-q:before {
+
+q::after,
+q::before {
   content: "";
 }
+
 abbr,
 acronym {
   border: 0;
 }
 
+/* ---------------------------- View Container ------------------------------ */
+
+.view-container{
+  width: 80%;
+  min-height: 100vh;
+  padding: 50px 100px;
+}
+
+/* ------------------------------- Sections --------------------------------- */
+
 .section {
   position: relative;
   padding: 0 2rem 0 3rem;
 }
+
 #section-1 {
   text-align: center;
 }
-#section-1 h2:before {
-  content: "";
+
+#section-1 h2::before {
   display: inline-block;
-  height: 200px;
   width: 232px;
+  height: 200px;
+  content: "";
 }
+
 #section-1 h1 {
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
-  margin: 1.5em auto 1em auto;
+  margin: 1.5em auto 1em;
 }
+
+.artworks li {
+  display: list-item;
+  list-style: none;
+}
+
 #section-1 li {
   /* display: inline-block; */
   margin: 1.25em 0.3em;
 }
 
-/* sidebar */
+/* --------------------------- Sidebar  / Menu ------------------------------ */
+
 #menu li {
-  display: block;
   position: relative;
+  display: block;
   padding: 0 0 21px 30px;
   color: var(--color-text);
 }
 
 #menu li:first-of-type {
-  font-family: "Cormorant", serif;
-  font-weight: 400;
-  font-style: italic;
   margin-bottom: 50px;
+  font-family: Cormorant, serif;
+  font-style: italic;
+  font-weight: 400;
 }
 
 #menu a {
-  color: var(--color-text);
-  text-decoration: none;
   font-family: "Space Mono", monospace;
   font-size: 18px;
   font-weight: 400;
+  color: var(--color-text);
+  text-decoration: none;
 }
 
 #menu a:hover {
@@ -198,30 +219,29 @@ acronym {
 }
 
 #menu a:focus {
-  text-decoration: underline;
   font-weight: 700;
+  text-decoration: underline;
 }
 
 .bm-menu {
+  padding-top: 15px;
   background-color: var(--color-sidebar);
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
-  padding-top: 15px;
 }
 
 .bm-item-list {
-  color: var(--color-text);
   margin: 0;
   font-size: 18px;
+  color: var(--color-text);
 }
 
 .bm-item-list > * {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: box;
+  display: flexbox;
   display: contents;
-  text-decoration: none;
-  /* flex-direction: row; */
   flex-wrap: wrap;
+  text-decoration: none;
 }
 
 .bm-overlay {
@@ -229,22 +249,22 @@ acronym {
 }
 
 .sidenav {
-  height: 100%;
-  width: 80px;
-  padding-top: 21px;
   position: fixed;
-  z-index: 100;
   top: 0;
   left: 0;
-  background-color: var(--color-sidebar);
+  z-index: 100;
+  width: 80px;
+  height: 100%;
+  padding-top: 21px;
   overflow-x: hidden;
+  background-color: var(--color-sidebar);
   transition: 0.5s;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
 }
 
 .sidenav p {
-  padding: 0 21px 21px 21px;
+  padding: 0 21px 21px;
   font-size: 14px;
   line-height: 21px;
 }
@@ -253,29 +273,26 @@ acronym {
   padding: 0 20px 0 21px;
 }
 
+/* -------------------------- Selected Artworks ----------------------------- */
+
 .fichatecnica {
+  margin-top: -3rem;
+  margin-bottom: 3rem;
   font-family: "Space Mono", monospace;
   font-size: 20px;
   font-style: oblique;
-  line-height: 40px;
   font-weight: 400;
-  margin-bottom: 3rem;
-  margin-top: -3rem;
+  line-height: 40px;
 }
 
 .artworks {
-  background-color: var(--color-sidebar);
   padding: 0.5rem;
+  background-color: var(--color-sidebar);
 }
 
-.artworks li {
-  list-style: none;
-  display: list-item;
-}
-
-.artwork li:after {
-  content: "\A";
+.artwork li::after {
   white-space: pre;
+  content: "\A";
 }
 
 #selected-works {
@@ -287,15 +304,62 @@ acronym {
 }
 
 #main {
-  transition: margin-left 0.5s;
   padding: 16px;
+  transition: margin-left 0.5s;
 }
 
 @media screen and (max-height: 450px) {
   .sidenav {
     padding-top: 15px;
   }
+
   .sidenav a {
     font-size: 18px;
   }
+}
+
+/* ------------------------------- Transitions ------------------------------ */
+
+.slide-down-enter-active,
+.slide-down-leave-active,
+.slide-up-enter-active,
+.slide-up-leave-active {
+  transition: all 1s ease;
+}
+
+/*  
+  translateY(-100%) to go up 
+  translateY(100%) to go down 
+*/
+
+.slide-down-enter-to,
+.slide-down-leave-from {
+  position: absolute;
+  top: 0;
+}
+
+.slide-up-leave-from,
+.slide-up-enter-to{
+  position: absolute;
+  top: 0;
+}
+
+.slide-up-enter-from {
+  position: absolute;
+  top: 100vh;
+}
+
+.slide-up-leave-to {
+  position: absolute;
+  top: -100vh;
+}
+
+.slide-down-enter-from {
+  position: absolute;
+  top: -100vh;
+}
+
+.slide-down-leave-to {
+  position: absolute;
+  top: 100vh;
 }
