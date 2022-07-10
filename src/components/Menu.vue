@@ -75,6 +75,7 @@
 <style scoped>
   .sidebar {
     padding: 40px;
+    background-color: var(--color-sidebar);
   }
 
   #menu {
@@ -111,15 +112,17 @@
 
   #menu a.selected {
     font-weight: 700;
+    text-decoration: none;
   }
 
   #menu a:hover {
     font-weight: 700;
+    text-decoration: none;
   }
 
   #menu a:focus {
     font-weight: 700;
-    text-decoration: underline;
+    text-decoration: none;
   }
 
   .bm-menu {
@@ -136,8 +139,6 @@
   }
 
   .bm-item-list > * {
-    display: box;
-    display: flexbox;
     display: contents;
     flex-wrap: wrap;
     text-decoration: none;
@@ -147,42 +148,30 @@
     background: var(--color-sidebar);
   }
 
-  .sidenav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    width: 80px;
-    height: 100%;
-    padding-top: 21px;
-    overflow-x: hidden;
-    background-color: var(--color-sidebar);
-    transition: 0.5s;
-    -webkit-font-smoothing: antialiased;
-    -moz-font-smoothing: antialiased;
-  }
-
-  .sidenav p {
-    font-size: 14px;
-    line-height: 21px;
-  }
-
-  .sidenav img {
-    padding: 0 20px 0 21px;
-  }
-
   #main {
     padding: 16px;
     transition: margin-left 0.5s;
   }
 
-  @media screen and (max-height: 450px) {
-    .sidenav {
-      padding-top: 15px;
+  @media (max-width: 1024px) {
+    .sidebar {
+      padding: 100px;
     }
 
-    .sidenav a {
-      font-size: 18px;
+    #menu a {
+      font-size: max(4vw, 24px);
+    }
+
+    .logotype {
+      font-size: max(6vw, 28px);
+      font-weight: 400;
+      line-height: max(6vw, 28px);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .sidebar {
+      padding: 80px;
     }
   }
 </style>

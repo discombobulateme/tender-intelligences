@@ -14,5 +14,8 @@ export const useAppStateStore = defineStore('appState', {
     setPageHeight(height) {
       this.pageHeight = height
     },
+    toggleMenu(height) {
+      this.menuOpen = !this.menuOpen
+    },
   },
 })

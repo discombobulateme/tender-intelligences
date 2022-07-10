@@ -13,7 +13,7 @@
 
   let yTouch = ref(null)
 
-  const currTime = ref(new Date().getTime())
+  // const currTime = ref(new Date().getTime())
 
   const isTouchDevice = computed(() => {
     return (
@@ -71,23 +71,29 @@
     const swipeThreshold = 200
 
     const viewContainer = document.querySelector('.view-container')
+    // Checking if we have a up swipe:
     if (Math.abs(deltaY) > swipeThreshold && deltaY > 0) {
-      /* Up swipe */
+      // If we have a up swipe and the view is at the bottom of the page,
+      // we change the page to the next view:
       if (
         viewContainer.scrollTop ===
         viewContainer.scrollHeight - viewContainer.offsetHeight
       ) {
         changePage(1)
       }
+      // Checking if we have a down swipe:
     } else if (Math.abs(deltaY) > swipeThreshold && deltaY < 0) {
-      // Down swipe
+      // If we have a down swipe and the view is at the top of the page,
+      // we change the page to the previous view:
       if (window.scrollY === 0) {
-        // Down swipe beyond page top, switch to previous page
         changePage(-1)
       }
     }
   }
 
+  // This function calculates the next page to transition to, based on a
+  // direction (1 or -1) and the current page. It looks for the "order" meta
+  // property in the current page and returns the next page based on that:
   function changePage(direction) {
     const currRoute = route.path
     const currRouteOrder = router.options.routes.find(
@@ -110,6 +116,11 @@
       ).path
     }
 
+    const prevView = document.getElementById(currRoute.split('/')[1])
+    console.log(prevView)
+
+    prevView.scrollTop = prevView.scrollHeight
+
     scroll.value = 0
 
     // Block scroll/swipe updates until transition is finished:
@@ -128,10 +139,13 @@
   }
 
   function trackScroll() {
+    // If the device has a touch screen, we track the touch events:
     if (isTouchDevice.value) {
       document.addEventListener('touchstart', handleTouchStart, false)
       document.addEventListener('touchmove', handleTouchMove, false)
-    } else {
+    }
+    // Otherwise we track the mouse wheel events:
+    else {
       window.addEventListener('wheel', handleScrollPageChange)
     }
   }
@@ -148,7 +162,12 @@
 
 <template>
   <div class="main-container">
-    <Menu class="menu" />
+    <Menu class="menu" :class="{ open: appState.menuOpen }" />
+    <div class="hamburger-icon" @click="appState.toggleMenu">
+      <span class="bar1" :class="{ open: appState.menuOpen }"></span>
+      <span class="bar2" :class="{ open: appState.menuOpen }"></span>
+      <span class="bar3" :class="{ open: appState.menuOpen }"></span>
+    </div>
     <router-view v-slot="{ Component, route }" class="main-view-container">
       <transition :name="route.meta.transitionName">
         <component
@@ -162,15 +181,86 @@
 </template>
 
 <style>
+  :root {
+    --menu-size: 35px;
+  }
+
   .menu {
     position: fixed;
-    width: 20%;
+    width: 25%;
     height: 100vh;
   }
 
   .main-view-container {
-    width: 80%;
+    width: 75%;
     height: 100vh;
     margin-left: 20%;
+  }
+
+  .hamburger-icon {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+    display: none;
+    width: var(--menu-size);
+    height: var(--menu-size);
+    cursor: pointer;
+  }
+
+  .bar1,
+  .bar2,
+  .bar3 {
+    display: block;
+    width: var(--menu-size);
+    height: 5px;
+    margin: 6px 0;
+    background-color: rgb(51 51 51);
+    opacity: 1;
+    transition: all 0.4s ease;
+  }
+
+  /* Rotate first bar */
+  .bar1.open {
+    transform: rotate(-45deg) translate(-8px, 8px);
+  }
+
+  /* Fade out the second bar */
+  .bar2.open {
+    opacity: 0;
+  }
+
+  /* Rotate last bar */
+  .bar3.open {
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+
+  @media (max-width: 1024px) {
+    .menu {
+      z-index: 2;
+      width: 100vw;
+      height: 100vh;
+      visibility: hidden;
+      opacity: 0;
+      transition: transform 1s ease, visibility 1s linear 1s,
+        opacity 1s linear 1s;
+      transform: translateX(-100vw);
+    }
+
+    .menu.open {
+      visibility: visible;
+      opacity: 1;
+      transition: transform 1s ease;
+      transform: translateX(0);
+    }
+
+    .main-view-container {
+      width: 100%;
+      margin-left: 0;
+    }
+
+    .hamburger-icon {
+      display: block;
+    }
   }
 </style>

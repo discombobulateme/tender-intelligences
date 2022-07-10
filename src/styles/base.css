@@ -175,10 +175,17 @@ acronym {
 /* ---------------------------- View Container ------------------------------ */
 
 .view-container{
-  width: 80%;
+  width: calc(100% - 200px);
   height: fit-content;
   min-height: 100vh;
   padding: 50px 100px;
+}
+
+@media (max-width: 1024px) {
+  .view-container{
+    width: 100%;
+    padding: 80px;
+  }
 }
 
 /* ------------------------------- Sections --------------------------------- */
