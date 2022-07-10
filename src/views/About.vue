@@ -1,5 +1,21 @@
+<script setup>
+  import { ref, onMounted } from 'vue'
+  import { useRoute, useRouter } from 'vue-router'
+  import { useAppStateStore } from '@/stores/appState'
+
+  const appState = useAppStateStore()
+
+  const route = useRoute()
+  const router = useRouter()
+
+  onMounted(() => {
+    window.scrollTo(0, 0)
+    appState.setPageHeight(document.getElementById('about').scrollHeight)
+  })
+</script>
+
 <template>
-  <div class="view-container">
+  <div id="about" class="view-container">
     <h3>about</h3>
     <p>
       “tender intelligences” is an exhibition on the use, design and care of
