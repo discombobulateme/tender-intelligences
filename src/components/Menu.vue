@@ -69,6 +69,31 @@
         </router-link>
       </li>
     </ul>
+    <br />
+    <p>this exhibition is proudly part of</p>
+    <a
+      href="https://www.b-la-connect.org/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img
+        style="height: 100px"
+        src="/src/assets/bla-logo.png"
+        alt="BLA logo"
+      />
+    </a>
+    <p>& possible through the support of</p>
+    <a
+      href="https://foundation.mozilla.org/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img
+        style="width: 200px"
+        src="/src/assets/mozilla-logo.png"
+        alt="Mozilla logo"
+      />
+    </a>
   </div>
 </template>
 
