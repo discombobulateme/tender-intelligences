@@ -10,22 +10,25 @@
 
   onMounted(() => {
     window.scrollTo(0, 0)
-    appState.setPageHeight(document.getElementById('media-kit').scrollHeight)
+    appState.setPageHeight(document.getElementById('home').scrollHeight)
   })
 </script>
 
 <template>
-  <div id="media-kit" class="view-container">
-    <h3>media kit</h3>
-    <p>
-      you can download the exhibition's media kit
-      <a href="http://" target="_blank" rel="noopener noreferrer">here</a>.
-    </p>
+  <div id="home" class="view-container">
+    <div>
+      <h1>tender intelligences</h1>
+      <h2>use, design and care of community-driven AI</h2>
+    </div>
+    <div>
+      <h3>Los Angeles July 7th - 12th 2022</h3>
+      <h3>Berlin Summer 2023</h3>
+    </div>
   </div>
 </template>
 
 <style scoped>
   .view-container {
-    background-color: var(--color-blue);
+    background-color: var(--color-orange);
   }
 </style>

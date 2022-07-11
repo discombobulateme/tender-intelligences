@@ -1,14 +1,15 @@
-import { createApp } from "vue";
-import router from "./router";
+import { createApp, markRaw } from 'vue'
+import router from './router'
+import { createPinia } from 'pinia'
 
-import App from "./App.vue";
+import App from './App.vue'
 
-import "vue-fullpage.js/dist/style.css";
-import VueFullPage from "vue-fullpage.js";
+import '@/styles/base.css'
 
-import "./assets/base.css";
+// Allow Pinia stores to access Vue Router instance:
+const pinia = createPinia()
+pinia.use(({ store }) => {
+  store.router = markRaw(router)
+})
 
-const app = createApp(App);
-app.use(VueFullPage);
-app.use(router);
-app.mount("#app");
+createApp(App).use(pinia).use(router).mount('#app')

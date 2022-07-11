@@ -1,5 +1,23 @@
+<script setup>
+  import { ref, onMounted } from 'vue'
+  import { useRoute, useRouter } from 'vue-router'
+  import { useAppStateStore } from '@/stores/appState'
+
+  const appState = useAppStateStore()
+
+  const route = useRoute()
+  const router = useRouter()
+
+  onMounted(() => {
+    window.scrollTo(0, 0)
+    appState.setPageHeight(
+      document.getElementById('local-partners').scrollHeight
+    )
+  })
+</script>
+
 <template>
-  <div>
+  <div id="local-partners" class="view-container">
     <h3>local partners</h3>
     <p>
       Our curatorial work was only possible through a close collaboration with
@@ -54,3 +72,9 @@
     </p>
   </div>
 </template>
+
+<style scoped>
+  .view-container {
+    background-color: var(--color-yellow);
+  }
+</style>
